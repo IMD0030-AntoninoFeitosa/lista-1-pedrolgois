@@ -2,8 +2,30 @@
 
 std::vector<unsigned int> fib_below_n( unsigned int n )
 {
-    // TODO: adicione o seu código aqui.
+     vector<unsigned int> fibonacci;
 
-    // TODO: Isto é apenas um STUB. Troque o retorno pelo que você julgar correto.
-    return std::vector<unsigned int>{};
+     int number;
+     int index = 0;
+     bool controll = true;
+
+     while(controll){
+         if(index == 0 || index == 1){
+             if(n > 1){ 
+                 fibonacci.push_back(1);
+             }
+             else{
+                 return fibonacci;
+             }
+         }else{
+             number = fibonacci[index-1] + fibonacci[index-2];
+             if(number < n){
+                 fibonacci.push_back(number);
+             }else{
+                 controll = false;
+             }
+         }
+         index++;
+     }
+
+    return fibonacci;
 }
