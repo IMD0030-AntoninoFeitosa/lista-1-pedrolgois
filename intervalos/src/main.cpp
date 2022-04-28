@@ -37,6 +37,7 @@ int main(void)
 
     // quantifying and printing the percentages
     for(int index = 0; index < tamanho; index++) {
+        // o cast deveria ser static_cast<float>(c[index])
         std::cout << std::setprecision(4) << ((float)c[index]/(float)t)*100 << std::endl;
     }
 
